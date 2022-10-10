@@ -11,8 +11,7 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 
-const dbURI = 'mongodb+srv://Punk73:root@cluster0.blr4nw3.mongodb.net/?retryWrites=true&w=majority';
-
+const dbURI = process.env.dbURI;
 // const db = Mongoose
 app.use(cors())
 app.use(express.urlencoded({extended: true }));
